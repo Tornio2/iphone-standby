@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import IPhoneFrame from './components/IPhoneFrame/IPhoneFrame.js';
+import Clock from './components/modules/Clock.js';
+import WakeLockController from './components/WakeLockController/WakeLockController';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <IPhoneFrame>
+        <div className="standby-mode">
+          <WakeLockController />
+          <Clock />
+          <div className="placeholder-modules">
+            {/* Additional modules will be added here later */}
+          </div>
+        </div>
+      </IPhoneFrame>
     </div>
   );
 }

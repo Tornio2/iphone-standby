@@ -1,0 +1,104 @@
+.iphone-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  perspective: 1000px;
+}
+
+.iphone-frame {
+  position: relative;
+  width: 812px;
+  height: 375px;
+  background-color: #111;
+  border-radius: 50px;
+  padding: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+.iphone-notch {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  width: 120px;
+  height: 30px;
+  background-color: #111;
+  border-bottom-left-radius: 20px;
+  border-radius: 20px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iphone-speaker {
+  width: 60px;
+  height: 6px;
+  background-color: #333;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+.iphone-camera {
+  width: 12px;
+  height: 12px;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+.iphone-screen {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.iphone-button {
+  position: absolute;
+  width: 4px;
+  height: 50px;
+  background-color: #333;
+  border-radius: 2px;
+  top: 100px;
+  right: -4px;
+}
+
+@media screen and (max-width: 850px) {
+  .iphone-frame {
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .iphone-frame {
+    transform: scale(0.6);
+  }
+}
+
+/* On actual mobile devices, fill the screen */
+@media screen and (max-width: 480px) {
+  .iphone-container {
+    perspective: none;
+  }
+  
+  .iphone-frame {
+    width: 100%;
+    height: 100%;
+    transform: none;
+    border-radius: 0;
+    padding: 0;
+  }
+  
+  .iphone-screen {
+    border-radius: 0;
+  }
+  
+  .iphone-notch, .iphone-button {
+    display: none;
+  }
+}
