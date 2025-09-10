@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Tornio2/iphone-standby/static/css/main.ed475682.css",
+    "main.js": "/Tornio2/iphone-standby/static/js/main.9dd95d3a.js",
+    "index.html": "/Tornio2/iphone-standby/index.html",
+    "main.ed475682.css.map": "/Tornio2/iphone-standby/static/css/main.ed475682.css.map",
+    "main.9dd95d3a.js.map": "/Tornio2/iphone-standby/static/js/main.9dd95d3a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed475682.css",
+    "static/js/main.9dd95d3a.js"
+  ]
+}
