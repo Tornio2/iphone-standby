@@ -2,8 +2,9 @@
   "short_name": "StandBy",
   "name": "Tornio's StandBy",
   "start_url": "index.html",
-  "display": "fullscreen",
   "orientation": "landscape",
+  "display_override": ["standalone", "fullscreen"],
+  "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
   "icons": [
