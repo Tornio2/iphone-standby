@@ -74,12 +74,6 @@
   }
 }
 
-/* @media screen and (max-width: 700px) {
-  .iphone-frame {
-    transform: scale(0.6);
-  }
-} */
-
 /* On actual mobile devices, fill the screen */
 @media screen /*and (max-width: 700px)*/ and (max-height: 700px) {
   .iphone-container {
