@@ -12,6 +12,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
+  background-color: #000;
+  color: #fff;
+  touch-action: none; /* Prevent default touch behaviors */
 }
 
 code {
@@ -21,4 +24,49 @@ code {
 
 html, body, #root {
   height: 100%;
+  width: 100%;
+}
+
+/* Prevent scrolling and bouncing effects */
+body {
+  position: fixed;
+  overflow: hidden;
+}
+
+/* Force landscape on mobile and prevent scrolling */
+@media screen and (max-height: 700px) {
+  html, body {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+  }
+  
+  /* Rotate content if device is in portrait mode */
+  @media (orientation: portrait) {
+    html {
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh;
+      height: 100vw;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }
+
+  @media (orientation: landscape) {
+    html {
+      transform: rotate(90deg);
+      transform-origin: left top;
+      width: 100vh;
+      height: 100vw;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }
 }
