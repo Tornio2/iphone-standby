@@ -23,11 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
             element.msRequestFullscreen();
         }
         
-        // Try to lock to landscape orientation
+        // Try to lock to landscape orientation - fix ESLint errors
         if (window.screen && window.screen.orientation && window.screen.orientation.lock) {
             window.screen.orientation.lock('landscape').catch(function(error) {
                 console.log("Orientation lock failed: " + error);
             });
+        } else if (window.orientation !== undefined) {
+            // Handle iOS orientation through CSS instead
+            console.log("Using CSS for orientation control");
         }
     }
     
@@ -40,9 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
     }, { passive: false });
     
-    // Add to home screen prompt
-    window.addEventListener('beforeinstallprompt', (e) => {
-        // Show a custom "Add to Home Screen" prompt
-        // You can customize this part based on your UI
-    });
+    // Handle iOS standalone mode detection
+    if (window.navigator.standalone === true) {
+        console.log("Running in standalone mode on iOS");
+        // Set up any iOS-specific behaviors here
+        document.body.classList.add('ios-standalone');
+    }
 });
