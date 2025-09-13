@@ -6,32 +6,56 @@
   perspective: 1000px;
 }
 
+/* Base iPhone frame styling */
 .iphone-frame {
   position: relative;
-  width: 812px;
-  height: 375px;
   background-color: #111;
   border-radius: 50px;
   padding: 12px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   border: 1px solid #333;
+  transition: all 0.5s ease;
 }
 
+/* Landscape mode (default) */
+.iphone-frame.landscape {
+  width: 812px;
+  height: 375px;
+}
+
+/* Portrait mode */
+.iphone-frame.portrait {
+  width: 375px;
+  height: 812px;
+}
+
+/* Notch positioning based on orientation */
 .iphone-notch {
   position: absolute;
-  left: -20px;
-  top: 50%;
-  transform: translateY(-50%) rotate(90deg);
-  width: 120px;
-  height: 30px;
   background-color: #111;
-  border-bottom-left-radius: 20px;
   border-radius: 20px;
   z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.5s ease;
+}
+
+.iphone-notch.landscape {
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  width: 120px;
+  height: 30px;
+}
+
+.iphone-notch.portrait {
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 30px;
 }
 
 .iphone-speaker {
@@ -58,24 +82,39 @@
   position: relative;
 }
 
+/* Button positioning based on orientation */
 .iphone-button {
   position: absolute;
-  width: 4px;
-  height: 50px;
   background-color: #333;
   border-radius: 2px;
+  transition: all 0.5s ease;
+}
+
+.iphone-button.landscape {
+  width: 4px;
+  height: 50px;
   top: 100px;
   right: -4px;
 }
 
+.iphone-button.portrait {
+  width: 50px;
+  height: 4px;
+  bottom: -4px;
+  right: 100px;
+}
+
 @media screen and (max-width: 850px) {
-  .iphone-frame {
+  .iphone-frame.landscape {
+    transform: scale(0.8);
+  }
+  .iphone-frame.portrait {
     transform: scale(0.8);
   }
 }
 
 /* On actual mobile devices, fill the screen */
-@media screen /*and (max-width: 700px)*/ and (max-height: 700px) {
+@media screen and (max-width: 700px) and (max-height: 700px) {
   .iphone-container {
     perspective: none;
   }
@@ -86,8 +125,6 @@
     transform: none;
     border-radius: 0;
     padding: 0;
-    box-shadow: none;
-    border: none;
   }
   
   .iphone-screen {
