@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <IPhoneFrame isLandscape={isLandscape}>
         <div className="standby-mode">
-          <WakeLockController />
+          {/* <WakeLockController /> */}
           <OneBigTwoSmallTemplate
             isLandscape={isLandscape} 
             mainContent={<Clock />}

@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .standby-mode {
   display: flex;
   flex-direction: column;
@@ -13,7 +9,3 @@
   padding: 20px;
 }
 
-.placeholder-modules {
-  margin-top: 30px;
-  width: 100%;
-}
