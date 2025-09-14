@@ -20,24 +20,6 @@
   color: #ff8080;
 }
 
-.wakelock-status {
-  margin-bottom: 15px;
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 15px;
-  transition: background-color 0.3s;
-}
-
-.wakelock-status.active {
-  background-color: rgba(0, 255, 0, 0.2);
-  color: #80ff80;
-}
-
-.wakelock-status.inactive {
-  background-color: rgba(255, 255, 0, 0.2);
-  color: #ffff80;
-}
-
 .wakelock-toggle {
   background-color: #5b0000;
   position: absolute;

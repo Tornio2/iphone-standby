@@ -76,9 +76,6 @@ const WakeLockController = () => {
         </div>
       ) : (
         <>
-          {/* <div className={`wakelock-status ${isActive ? 'active' : 'inactive'}`}>
-            {isActive ? 'Screen will stay awake' : 'Screen may go to sleep'}
-          </div> */}
           <button className={`wakelock-toggle ${isActive ? 'active' : ''}`} onClick={toggleWakeLock}>
             Wake Lock
           </button>

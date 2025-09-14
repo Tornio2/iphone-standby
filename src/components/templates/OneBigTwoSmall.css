@@ -1,4 +1,4 @@
-.tri-section-template {
+.one-big-two-small-template {
   display: flex;
   width: 100%;
   height: 100%;
@@ -7,17 +7,17 @@
 }
 
 /* Landscape layout */
-.tri-section-template.landscape {
+.one-big-two-small-template.landscape {
   flex-direction: row;
 }
 
-.tri-section-template.landscape .main-section {
+.one-big-two-small-template.landscape .main-section {
   width: 50%;
   height: 100%;
   border-right: 1px solid #333;
 }
 
-.tri-section-template.landscape .secondary-sections {
+.one-big-two-small-template.landscape .secondary-sections {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -25,17 +25,17 @@
 }
 
 /* Portrait layout */
-.tri-section-template.portrait {
+.one-big-two-small-template.portrait {
   flex-direction: column;
 }
 
-.tri-section-template.portrait .main-section {
+.one-big-two-small-template.portrait .main-section {
   width: 100%;
   height: 50%;
   border-bottom: 1px solid #333;
 }
 
-.tri-section-template.portrait .secondary-sections {
+.one-big-two-small-template.portrait .secondary-sections {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -50,20 +50,20 @@
   align-items: center;
 }
 
-.tri-section-template.landscape .secondary-section {
+.one-big-two-small-template.landscape .secondary-section {
   border-bottom: 1px solid #333;
   height: 50%;
 }
 
-.tri-section-template.landscape .secondary-section:last-child {
+.one-big-two-small-template.landscape .secondary-section:last-child {
   border-bottom: none;
 }
 
-.tri-section-template.portrait .secondary-section {
+.one-big-two-small-template.portrait .secondary-section {
   border-right: 1px solid #333;
 }
 
-.tri-section-template.portrait .secondary-section:last-child {
+.one-big-two-small-template.portrait .secondary-section:last-child {
   border-right: none;
 }
 

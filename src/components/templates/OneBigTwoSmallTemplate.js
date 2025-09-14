@@ -3,7 +3,7 @@ import './OneBigTwoSmall.css';
 
 const OneBigTwoSmallTemplate = ({ isLandscape, mainContent, topRightContent, bottomRightContent }) => {
   return (
-    <div className={`tri-section-template ${isLandscape ? 'landscape' : 'portrait'}`}>
+    <div className={`one-big-two-small-template ${isLandscape ? 'landscape' : 'portrait'}`}>
       <div className="main-section">
         {mainContent || <div className="placeholder-content">Main Section</div>}
       </div>
