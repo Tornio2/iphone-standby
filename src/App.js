@@ -8,7 +8,7 @@ import './App.css';
 function App() {
   const [isLandscape, setIsLandscape] = useState(true);
 
-  const handleOrientationToggle = () => {
+  const toggleOrientation = () => {
     setIsLandscape(!isLandscape);
   };
 
@@ -25,7 +25,7 @@ function App() {
       </IPhoneFrame>
       <OrientationToggle 
         isLandscape={isLandscape} 
-        onToggle={handleOrientationToggle} 
+        onToggle={toggleOrientation} 
       />
     </div>
   );

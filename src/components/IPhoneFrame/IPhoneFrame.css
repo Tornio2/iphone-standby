@@ -92,16 +92,15 @@
 
 .iphone-button.landscape {
   width: 160px;
-  height: 4px;
+  height: 5px;
   bottom: 6%;
   right: 50%;
   transform: translateX(50%);
-  ;
 }
 
 .iphone-button.portrait {
-  width: 150px;
-  height: 4px;
+  width: 160px;
+  height: 5px;
   bottom: 3%;
   right: 50%;
   transform: translateX(50%);}
