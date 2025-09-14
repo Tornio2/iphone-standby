@@ -1,0 +1,85 @@
+.tri-section-template {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Landscape layout */
+.tri-section-template.landscape {
+  flex-direction: row;
+}
+
+.tri-section-template.landscape .main-section {
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid #333;
+}
+
+.tri-section-template.landscape .secondary-sections {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+
+/* Portrait layout */
+.tri-section-template.portrait {
+  flex-direction: column;
+}
+
+.tri-section-template.portrait .main-section {
+  width: 100%;
+  height: 50%;
+  border-bottom: 1px solid #333;
+}
+
+.tri-section-template.portrait .secondary-sections {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50%;
+}
+
+/* Common styles for secondary sections */
+.secondary-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tri-section-template.landscape .secondary-section {
+  border-bottom: 1px solid #333;
+  height: 50%;
+}
+
+.tri-section-template.landscape .secondary-section:last-child {
+  border-bottom: none;
+}
+
+.tri-section-template.portrait .secondary-section {
+  border-right: 1px solid #333;
+}
+
+.tri-section-template.portrait .secondary-section:last-child {
+  border-right: none;
+}
+
+/* Placeholder content styling */
+.placeholder-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 50, 50, 0.3);
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Main section has a slightly different color to differentiate */
+.main-section .placeholder-content {
+  background-color: rgba(60, 60, 60, 0.3);
+}

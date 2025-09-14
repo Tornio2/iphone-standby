@@ -76,11 +76,11 @@ const WakeLockController = () => {
         </div>
       ) : (
         <>
-          <div className={`wakelock-status ${isActive ? 'active' : 'inactive'}`}>
+          {/* <div className={`wakelock-status ${isActive ? 'active' : 'inactive'}`}>
             {isActive ? 'Screen will stay awake' : 'Screen may go to sleep'}
-          </div>
+          </div> */}
           <button className={`wakelock-toggle ${isActive ? 'active' : ''}`} onClick={toggleWakeLock}>
-            {isActive ? 'Disable Wake Lock' : 'Enable Wake Lock'}
+            Wake Lock
           </button>
         </>
       )}

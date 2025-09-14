@@ -3,6 +3,7 @@ import IPhoneFrame from './components/IPhoneFrame/IPhoneFrame.js';
 import OrientationToggle from './components/IPhoneFrame/OrientationToggle.js';
 import Clock from './components/modules/Clock.js';
 import WakeLockController from './components/WakeLockController/WakeLockController';
+import OneBigTwoSmallTemplate from './components/templates/OneBigTwoSmallTemplate.js';
 import './App.css';
 
 function App() {
@@ -17,10 +18,12 @@ function App() {
       <IPhoneFrame isLandscape={isLandscape}>
         <div className="standby-mode">
           <WakeLockController />
-          <Clock />
-          <div className="placeholder-modules">
-            {/* Additional modules will be added here later */}
-          </div>
+          <OneBigTwoSmallTemplate
+            isLandscape={isLandscape} 
+            mainContent={<Clock />}
+            topRightContent={<div>Top Right Content</div>}
+            bottomRightContent={<div>Bottom Right Content</div>}
+          />
         </div>
       </IPhoneFrame>
       <OrientationToggle 
