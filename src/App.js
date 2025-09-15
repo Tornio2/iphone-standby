@@ -18,9 +18,7 @@ function App() {
       <IPhoneFrame isLandscape={isLandscape}>
         <div className="standby-mode">
           {/* <WakeLockController /> */}
-          <OneBigTwoSmallTemplate
-            isLandscape={isLandscape} 
-            />
+          <OneBigTwoSmallTemplate isLandscape={isLandscape} />
         </div>
       </IPhoneFrame>
       <OrientationToggle 
