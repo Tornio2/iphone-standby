@@ -20,10 +20,7 @@ function App() {
           {/* <WakeLockController /> */}
           <OneBigTwoSmallTemplate
             isLandscape={isLandscape} 
-            mainContent={<Clock />}
-            topRightContent={<div>Top Right Content</div>}
-            bottomRightContent={<div>Bottom Right Content</div>}
-          />
+            />
         </div>
       </IPhoneFrame>
       <OrientationToggle 
