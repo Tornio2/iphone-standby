@@ -8,7 +8,6 @@
   box-sizing: border-box;
 }
 
-/* Landscape layout */
 .one-big-two-small-template.landscape {
   flex-direction: row;
   gap: 10px;
@@ -19,13 +18,15 @@
   height: 100%;
   border: 1px solid #444;
   border-radius: 25px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .one-big-two-small-template.portrait .main-section {
   width: 100%;
   height: 70%;
-  background-color: rgb(170, 0, 255);
+  /* background-color: rgb(170, 0, 255); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,7 +42,6 @@
   gap: 10px;
 }
 
-/* Portrait layout */
 .one-big-two-small-template.portrait {
   flex-direction: column;
   gap: 10px;
@@ -53,11 +53,10 @@
   flex-direction: column;
   width: 100%;
   height: 30%;
-  padding-bottom: 5%;
+  /* padding-bottom: 5%; */
   gap: 10px;
 }
 
-/* Common styles for secondary sections */
 .secondary-section {
   flex: 1;
   display: flex;
@@ -68,7 +67,6 @@
   overflow: hidden;
 }
 
-/* Placeholder content styling */
 .placeholder-content {
   display: flex;
   justify-content: center;
@@ -78,7 +76,7 @@
   background-color: rgba(50, 50, 50, 0.3);
   font-size: 14px;
   color: #aaa;
-  border-radius: 24px; /* Slightly smaller than parent to avoid overlap */
+  border-radius: 24px;
   padding: 10px;
   box-sizing: border-box;
 }
