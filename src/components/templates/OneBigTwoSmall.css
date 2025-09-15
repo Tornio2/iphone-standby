@@ -14,7 +14,7 @@
 }
 
 .one-big-two-small-template.landscape .main-section {
-  width: 75%;
+  width: 70%;
   height: 100%;
   border: 1px solid #444;
   border-radius: 25px;
@@ -37,7 +37,7 @@
 .one-big-two-small-template.landscape .secondary-sections {
   display: flex;
   flex-direction: column;
-  width: calc(50% - 5px);
+  width: 30%;
   height: 100%;
   gap: 10px;
 }
