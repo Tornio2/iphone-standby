@@ -30,7 +30,6 @@
   height: 812px;
 }
 
-/* Notch positioning based on orientation */
 .iphone-notch {
   position: absolute;
   background-color: #111;
@@ -39,8 +38,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.5s ease;
-}
+  }
 
 .iphone-notch.landscape {
   left: -20px;
@@ -82,7 +80,6 @@
   position: relative;
 }
 
-/* Button positioning based on orientation */
 .iphone-button {
   position: absolute;
   background-color: #333;
