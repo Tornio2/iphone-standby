@@ -41,17 +41,20 @@ const WidgetContainer = ({ sectionId }) => {
   };
 
   const handleLongPressStart = (e) => {
-    if (!selectedWidget) return;
-    
-    longPressTimer.current = setTimeout(() => {
-      const rect = e.currentTarget.getBoundingClientRect();
-      setLongPressPosition({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top
-      });
-      setShowWidgetOptions(true);
-    }, 500); // 500ms long press
-  };
+  if (!selectedWidget) return;
+  
+  const rect = e.currentTarget.getBoundingClientRect();
+  const posX = e.clientX - rect.left;
+  const posY = e.clientY - rect.top;
+  
+  longPressTimer.current = setTimeout(() => {
+    setLongPressPosition({
+      x: posX,
+      y: posY
+    });
+    setShowWidgetOptions(true);
+  }, 500);
+};
 
   const handleLongPressEnd = () => {
     if (longPressTimer.current) {
