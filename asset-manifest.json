@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/iphone-standby/static/css/main.bebf55da.css",
-    "main.js": "/iphone-standby/static/js/main.998746a6.js",
+    "main.css": "/iphone-standby/static/css/main.90e55d9d.css",
+    "main.js": "/iphone-standby/static/js/main.9d01c851.js",
     "index.html": "/iphone-standby/index.html",
-    "main.bebf55da.css.map": "/iphone-standby/static/css/main.bebf55da.css.map",
-    "main.998746a6.js.map": "/iphone-standby/static/js/main.998746a6.js.map"
+    "main.90e55d9d.css.map": "/iphone-standby/static/css/main.90e55d9d.css.map",
+    "main.9d01c851.js.map": "/iphone-standby/static/js/main.9d01c851.js.map"
   },
   "entrypoints": [
-    "static/css/main.bebf55da.css",
-    "static/js/main.998746a6.js"
+    "static/css/main.90e55d9d.css",
+    "static/js/main.9d01c851.js"
   ]
 }
