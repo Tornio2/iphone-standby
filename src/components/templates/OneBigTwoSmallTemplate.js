@@ -1,6 +1,6 @@
 import React from 'react';
 import './OneBigTwoSmall.css';
-import WidgetContainer from '../modules/utils/WidgetContainer';
+import WidgetContainer from '../utils/WidgetContainer';
 
 const OneBigTwoSmallTemplate = ({ isLandscape }) => {
   return (
