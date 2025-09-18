@@ -1,19 +1,20 @@
 import React, { useState, useRef } from 'react';
 import WidgetPlaceholder from './WidgetPlaceholder';
 import WidgetMenu from './WidgetMenu';
+import Clock from '../widgets/Clock'; 
 import './WidgetContainer.css';
 
 // Mock widget components - these would be replaced with actual widgets
-const Clock = () => <div className="mock-widget">Clock Widget</div>;
 const Weather = () => <div className="mock-widget">Weather Widget</div>;
 const Calendar = () => <div className="mock-widget">Calendar Widget</div>;
 const Notes = () => <div className="mock-widget">Notes Widget</div>;
 const Photos = () => <div className="mock-widget">Photos Widget</div>;
 
-const WidgetContainer = ({ sectionId }) => {
+const WidgetContainer = ({ sectionId, size = "small" }) => {
   const [selectedWidget, setSelectedWidget] = useState(null);
   const [showMenu, setShowMenu] = useState(false);
   const [showWidgetOptions, setShowWidgetOptions] = useState(false);
+  const containerRef = useRef(null);
   const longPressTimer = useRef(null);
   const [longPressPosition, setLongPressPosition] = useState({ x: 0, y: 0 });
 
@@ -21,7 +22,7 @@ const WidgetContainer = ({ sectionId }) => {
   const getWidgetComponent = () => {
     switch (selectedWidget) {
       case 'clock':
-        return <Clock />;
+        return <Clock size={size} />;
       case 'weather':
         return <Weather />;
       case 'calendar':
@@ -41,20 +42,19 @@ const WidgetContainer = ({ sectionId }) => {
   };
 
   const handleLongPressStart = (e) => {
-  if (!selectedWidget) return;
-  
-  const rect = e.currentTarget.getBoundingClientRect();
-  const posX = e.clientX - rect.left;
-  const posY = e.clientY - rect.top;
-  
-  longPressTimer.current = setTimeout(() => {
-    setLongPressPosition({
-      x: posX,
-      y: posY
-    });
-    setShowWidgetOptions(true);
-  }, 500);
-};
+    if (!selectedWidget) return;
+    
+    longPressTimer.current = setTimeout(() => {
+      if (containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect();
+        setLongPressPosition({
+          x: e.clientX - rect.left,
+          y: e.clientY - rect.top
+        });
+        setShowWidgetOptions(true);
+      }
+    }, 500); // 500ms long press
+  };
 
   const handleLongPressEnd = () => {
     if (longPressTimer.current) {
@@ -73,7 +73,7 @@ const WidgetContainer = ({ sectionId }) => {
   };
 
   return (
-    <div className="widget-container">
+    <div className="widget-container" ref={containerRef}>
       {selectedWidget ? (
         <div 
           className="widget-content"
